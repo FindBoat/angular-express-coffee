@@ -1,0 +1,8 @@
+h2 User Listing, Details
+
+p Click to load all users
+input.btn.btn-primary(type="button", ng-click="loadUsers()", value="Load!")
+br
+br
+ul
+  li(ng-repeat='post in posts') {{post.title}}
