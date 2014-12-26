@@ -1,0 +1,53 @@
+doctype html
+
+html(ng-app='app')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no')
+
+    title(ng-bind='title')
+
+    link(href='/client/styles.css' rel='stylesheet')
+
+    // CSS for modules.
+    link(href='/client/app/posts/posts.css' rel='stylesheet')
+      
+  body
+    div
+      div(ng-view)
+
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+    script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.js')
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-resource.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.min.js')
+
+    script(src='/client/app/app.module.js')
+
+    // Reusable blocks/modules.
+    script(src='/client/app/blocks/logger/logger.module.js')
+    script(src='/client/app/blocks/logger/logger.js')
+    script(src='/client/app/blocks/router/router.module.js')
+    script(src='/client/app/blocks/router/routehelper.js')
+
+    // Core modules.
+    script(src='/client/app/core/core.module.js')
+    script(src='/client/app/core/config.js')
+    script(src='/client/app/core/config.route.js')
+    script(src='/client/app/core/users.service.js')
+    script(src='/client/app/core/posts.service.js')
+    script(src='/client/app/core/auth.service.js')
+    script(src='/client/app/core/token-interceptor.service.js')
+    script(src='/client/app/core/error-interceptor.service.js')
+
+    // Auth modules.
+    script(src='/client/app/auth/auth.module.js')
+    script(src='/client/app/auth/config.route.js')
+    script(src='/client/app/auth/signup.controller.js')
+    script(src='/client/app/auth/login.controller.js')
+
+    // Posts modules.
+    script(src='/client/app/posts/posts.module.js')
+    script(src='/client/app/posts/config.route.js')
+    script(src='/client/app/posts/posts.controller.js')

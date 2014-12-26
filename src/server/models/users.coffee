@@ -1,23 +1,22 @@
 bcrypt = require 'bcrypt-nodejs'
 mongoose = require 'mongoose'
 
-User = new mongoose.Schema(
-  email: { type: String, unique: true, lowercase: true },
-  password: String,
+User = new mongoose.Schema
+  email: type: String, unique: true, lowercase: true
+  password: String
 
-  profile: {
-    name: { type: String, default: '' },
-    gender: { type: String, default: '' },
-    location: { type: String, default: '' },
-    website: { type: String, default: '' },
-    picture: { type: String, default: '' }
-  }
-)
+  profile:
+    name: type: String, default: ''
+    gender: type: String, default: ''
+    location: type: String, default: ''
+    website: type: String, default: ''
+    picture: type: String, default: ''
 
 
+# Hash password before saving.
 User.pre 'save', (next) ->
   user = this
-  if not user.isModified 'password' then return next()
+  unless user.isModified 'password' then return next()
 
   bcrypt.genSalt 5, (err, salt) ->
     if err? then return next err

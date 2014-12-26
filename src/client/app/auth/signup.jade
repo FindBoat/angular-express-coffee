@@ -1,0 +1,15 @@
+.page-signup
+  .row
+    .col-xs-6.col-xs-offset-3
+      form.form-horizontal(role='form' ng-submit='vm.submitSignupForm()')
+        .form-group
+          input.form-control(type='email' name='email' placeholder='Email'
+                             ng-model='vm.signup.email')
+        .form-group
+          input.form-control(type='password' name='password'
+                             placeholder='Password'
+                             ng-model='vm.signup.password')
+        .row
+          input.col-xs-12.btn.btn-primary.btn-large(
+              type='submit' value='Sign up')
+                         

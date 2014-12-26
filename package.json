@@ -9,26 +9,23 @@
     "url": "https://github.com/FindBoat/angular-express-coffee"
   },
   "scripts": {
-    "install": "node node_modules/coffee-script/bin/cake build",
     "start": "node server.js",
-    "test": "mocha --require should --compilers coffee:coffee-script/register --colors"
+    "build": "node node_modules/coffee-script/bin/cake build",
+    "dev": "node node_modules/coffee-script/bin/cake dev",
+    "manage": "node manage.js"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "1.0.x",
     "bootstrap-styl": "*",
-    "coffee-script": "1.7.x",
-    "connect-assets": "2.5.x",
-    "cookie-parser": "1.0.x",
+    "coffee-script": "1.8.x",
     "express": "4.x",
-    "express-session": "1.0.x",
     "express-validator": "^2.7.0",
+    "inquirer": "^0.8.0",
     "jade": "1.3.x",
-    "markdown": "0.4.0",
+    "jsonwebtoken": "^2.0.0",
     "mongoose": "3.8.x",
     "nib": "0.9.x",
-    "passport": "^0.2.1",
-    "passport-local": "^1.0.0",
     "stylus": "*",
     "util": "^0.10.3",
     "which": "1.0.5",
@@ -36,15 +33,12 @@
   },
   "devDependencies": {
     "coffee-script": "*",
-    "mocha": "*",
     "should": "*",
     "supertest": "*",
     "request": "*",
     "supervisor": "*",
-    "docco-husky": "*",
     "puts": "*",
-    "node-inspector": "*",
-    "ejs": "*"
+    "node-inspector": "*"
   },
   "engines": {
     "node": "~0.10.x",

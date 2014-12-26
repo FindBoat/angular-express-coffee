@@ -1,0 +1,20 @@
+.page-posts
+  .row
+    .col-xs-6.col-xs-offset-3
+      ul
+        li(ng-repeat='post in vm.posts')
+          p {{post.title}}
+          p {{post.body}}
+
+  .row
+    .col-xs-6.col-xs-offset-3
+      form.form-horizontal(role='form' ng-submit='vm.submitPostForm()')
+        .form-group
+          input.form-control(type='text' name='title' placeholder='Title'
+                             ng-model='vm.post.title')
+        .form-group
+          input.form-control(type='text' name='body'
+                             placeholder='Body' ng-model='vm.post.body')
+        .row
+          input.col-xs-12.btn.btn-primary.btn-large(
+              type='submit' value='Create')

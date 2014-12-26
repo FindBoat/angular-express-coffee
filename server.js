@@ -1,6 +1,6 @@
 var app, port;
 
-app = require('./.app');
+app = require('./.app/server/app');
 
 port = app.port;
 

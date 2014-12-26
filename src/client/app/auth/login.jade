@@ -1,0 +1,13 @@
+.page-login
+  .row
+    .col-xs-6.col-xs-offset-3
+      form.form-horizontal(role='form' ng-submit='vm.submitLoginForm()')
+        .form-group
+          input.form-control(type='email' name='email' placeholder='Email'
+                             ng-model='vm.login.email')
+        .form-group
+          input.form-control(type='password' name='password'
+                             placeholder='Password' ng-model='vm.login.password')
+        .row
+          input.col-xs-12.btn.btn-primary.btn-large(
+              type='submit' value='Log in')
